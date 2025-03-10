@@ -8,6 +8,10 @@ app = Flask(__name__)
 
 # Set up Chrome options
 options = webdriver.ChromeOptions()
+options.add_argument("--headless")  # Run in headless mode
+options.add_argument("--disable-gpu")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--start-maximized")  # Open full-screen
 options.add_experimental_option("detach", True)  # Keep browser open
 
